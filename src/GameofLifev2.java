@@ -20,7 +20,7 @@ public class GameofLifev2 {
 
     public static void main(String[] args) {
         System.out.println("Game field size: " + (liveField.length - 2) + " x " + (liveField[0].length - 2));
-        int p1 = (int) Math.round((double) (liveField.length - 2) / 2);
+        int p1 = (int) Math.round((double) (liveField.length - 2) / 2);     //разбитие на части
         int p2 = liveField.length - p1 - 2;
         ExecutorService excecutor = new ThreadPoolExecutor(4,4,999, TimeUnit.DAYS, new LinkedBlockingQueue<>());
         System.out.println("Cutting on 4 parts: " + p1 + "x" + p1 + ", " + p1 + "x" + p2 + ", " + p2 + "x" + p1 + ", " + p2 + "x" + p2);
